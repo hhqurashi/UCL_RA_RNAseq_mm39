@@ -1,0 +1,11 @@
+nextflow run nf-core/rnaseq \
+  -r 3.23.0 \
+  -profile conda \
+  -w /mnt/scratch/hqurashi/work \
+  --input /media/pontikos_nas2/HarisQurashi/projects/10_Sara_BulkRNAseq/data/samplesheet.csv \
+  --outdir /mnt/scratch/hqurashi/10_Sara_RNA_Seq/updated_outputs \
+  --aligner star_salmon \
+  --igenomes_ignore \
+  --fasta /media/pontikos_nas2/HarisQurashi/refs/Mus_musculus.GRCm39.dna.primary_assembly.fa.gz \
+  --gtf /media/pontikos_nas2/HarisQurashi/refs/Mus_musculus.GRCm39.115.gtf.gz \
+  -resume
